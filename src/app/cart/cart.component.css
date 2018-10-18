@@ -1,0 +1,32 @@
+.mat-card-actions {
+    margin: 0;
+}
+.example-card {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+.left_bck {
+    flex: 1;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.left_bck img {
+    width: 70%;
+}
+.right_bck {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+.product_name {
+    font-weight: 900;
+}
+.align-center {
+    display: flex;
+    align-items: center;
+}

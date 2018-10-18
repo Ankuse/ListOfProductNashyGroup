@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  remoteSite: 'http://xn--80ajam8ae9bc.xn--90ais',
+  remoteSiteNashy: 'http://nashy.by',
 };
 
 /*
