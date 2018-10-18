@@ -1,30 +1,33 @@
-<mat-card class="example-card">
-	<div class='left_bck col-xs-12'>
-		<img src='{{item.src}}'
-			 alt="Photo of a Shiba Inu"
-		>
-	</div>
-	<div class='right_bck col-xs-12'>
-		<mat-card-content>
-			<a class='product_name' href='{{item.detail}}' target='_blank'>
-				{{item.NAME}}
-			</a>
-			<p>
-				{{item.PREVIEW_TEXT}}
-			</p>
-		</mat-card-content>
-		<div class='row align-center'>
-			<div class='col-md-3'>
-				<mat-card-actions>
-					<button mat-raised-button color="primary">LIKE</button>
-				</mat-card-actions>
-			</div>
-			<div class='col-md-9'>
-				<mat-chip-list>
-					<mat-chip color="accent" selected>Accent fish</mat-chip>
-				</mat-chip-list>
+<div class='div' *ngFor='let item of items'>
+	<mat-card class="example-card">
+		<div class='left_bck col-xs-12'>
+			<img src='{{setItemSrc(item.PICT.src)}}'
+				 alt="Photo of a Shiba Inu"
+			>
+		</div>
+		<div class='right_bck col-xs-12'>
+			<mat-card-content>
+				<a class='product_name' href='{{item.detail}}' target='_blank'>
+					{{item.NAME}}
+				</a>
+				<p>
+					{{item.PREVIEW_TEXT}}
+				</p>
+			</mat-card-content>
+			<div class='row align-center'>
+				<div class='col-md-3'>
+					<mat-card-actions>
+						<button mat-raised-button color="primary">LIKE</button>
+					</mat-card-actions>
+				</div>
+				<div class='col-md-9'>
+					<mat-chip-list>
+						<mat-chip color="accent" selected>Accent fish</mat-chip>
+					</mat-chip-list>
+				</div>
 			</div>
 		</div>
-	</div>
-</mat-card>
+	</mat-card>
+</div>
+
 

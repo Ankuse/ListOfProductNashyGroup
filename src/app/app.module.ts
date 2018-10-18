@@ -5,7 +5,8 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCardModule, MatChipsModule, MatGridListModule, MatPaginatorModule} from '@angular/material';
 import { CartComponent } from './cart/cart.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {AuthInterceptor} from './auth/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,13 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule,
     MatPaginatorModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

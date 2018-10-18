@@ -1,7 +1,8 @@
 <div class='container bck_mrg_top'>
 	<div class='row bck_center'>
 		<div class='col-md-9'>
-			<app-cart *ngFor='let item of items' [item]='item'></app-cart>
+			<app-cart [items]='items'></app-cart>
+			
 			<mat-paginator [length]="items.length"
 						   [pageSize]="items.length/3"
 						   [pageSizeOptions]="[2, 3, 4, 5]">
